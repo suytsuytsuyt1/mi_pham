@@ -1,0 +1,78 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.header{
+   display: inline-block;
+   justify-content: center;
+    width: 80%;
+    height: auto;
+}
+/*___________________ marquee ___________________*/
+#marquee{
+    width: 100%;
+    height: 40px;
+    background-color: rgb(255, 241, 223);
+    display: flex;
+    align-items: center;
+}
+#marquee marquee{
+    font-size: 20px;
+}
+/*________________ *** ___________________*/
+
+.header>#logo{            /*___________________ logo  ___________________*/
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; 
+}
+.header> #logo>img{
+    width: 40%;
+}
+/*___________________ menu ___________________*/
+
+.header_menu{
+    width: 100%;
+    height:50px;
+    border-bottom: 2px solid rgb(214, 212, 207);
+    border-top:2px solid rgb(214, 212, 207) ;
+}
+.header_menu>ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header_menu>ul>li{
+    list-style: none;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+.header_menu>ul>li:hover{
+    transform: scale(1.2);
+}
+.header_menu>ul>li>a{
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    font-family: 'Charm', cursive;
+   
+}
+.header_menu>ul>li>a:hover{
+    color: rgb(245, 204, 80);  
+}
+
+
+
+
+
+
+
+
+
