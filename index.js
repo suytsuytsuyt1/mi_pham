@@ -15,6 +15,7 @@ function slider_chay() {
         images[currentImageIndex].style.display = "none";
         currentImageIndex = (currentImageIndex + 1) % images.length;
         images[currentImageIndex].style.display = "block";
+       
     }
 
     // Xử lý sự kiện click cho nút Next
@@ -26,10 +27,12 @@ function slider_chay() {
     prevBtn.addEventListener('click', () => {
         if (currentImageIndex === 0) {
             currentImageIndex = images.length - 1;
+            images[currentImageIndex].style.zIndex = -100;
         } else {
             currentImageIndex--;
         }
         images[currentImageIndex].style.display = "block";
+        images[currentImageIndex].style.zIndex = -100;
     });
 
     setInterval(nextImage, 6000); // Chuyển đổi hình ảnh sau mỗi 6 giây
