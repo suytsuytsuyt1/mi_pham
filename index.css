@@ -9,6 +9,7 @@ body{
 .header{
     width: 80%;
     height: auto;
+
 }
 /*___________________ marquee ___________________*/
 #marquee{
@@ -53,6 +54,7 @@ body{
     padding-left: 4%;
     padding-right: 4%;
     position: relative;
+    z-index: 100;
 }
 .header_menu>ul>li:hover{
     transform: scale(1.2);
@@ -150,7 +152,6 @@ body{
         margin-left: 0;
         opacity: 1;
     }
-
 }
 .header_menu>ul>li:nth-child(2):hover #menu_danh_muc>ul>li:nth-child(5){
     animation: li_5 0.75s ease-out 0.5s forwards;
@@ -166,61 +167,26 @@ body{
     }
 }
 
-
-/*___________________ banner___________________*/
-#header_banner{
-  width: 80%;
-  height: 200px;
-  
-}
-#slideshow{
-    display: flex;
-    justify-content: space-between; 
-    align-items: center; 
-    width: 100%;
-    height: 450px;
-    overflow: hidden;
-
-}
-#slideshow>img{
-    width: 160%;
-    height: 400px;;
-}
-
-/*___________________ button prevBtn____nextBtn___________________*/
-
-#prevBtn{
-    position: absolute;
-    display: inline-block;
-    left: 10%;
-    width: 5%;
-    height: 50px;
-    border: none;
-    opacity: 0.8;
-    transform: translateY(-50%);
-    margin-left: 10px;
+.navbar{
     display: none;
+}
+/*___________________ mobile menu___________________*/
 
-  }
-  #nextBtn{
-    position: absolute;
-    right: 10%;
-    display: inline-block;
-    width: 5%;
-    height: 50px;
-    border: none;
-    opacity: 0.8;
-    transform: translateY(-50%);
-    margin-right: 10px;
-    display: none;
-  }
+@media screen and (max-width:768px) {
+    body{
+        position: relative;
+    }
 
-  #slideshow:hover #prevBtn, #slideshow:hover #nextBtn {
-    display: block;
-  } 
- 
+    .header_menu{
+        display: none;
+    }    
+    .navbar{
+        display: block;
+        flex-direction: column;
+        align-items: start;
+    }
+   
 
-
-
+}
 
 
