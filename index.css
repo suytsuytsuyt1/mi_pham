@@ -1,131 +1,149 @@
-body{
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     width: 100%;
-    display: flex;
+    display:flex;
     justify-content: center;
 }
-.header{
+.center{
     width: 80%;
-    height: auto;
-
 }
+.header {
+    width: 100%;
+    height: auto;
+}
+
 /*___________________ marquee ___________________*/
-#marquee{
+#marquee {
     width: 100%;
     height: 40px;
     background-color: rgb(255, 241, 223);
     display: flex;
     align-items: center;
 }
-#marquee marquee{
+
+#marquee marquee {
     font-size: 20px;
 }
 
 /*___________________ logo  ___________________*/
-.header>#logo{
+.header>#logo {
     display: flex;
     justify-content: center;
     width: 100%;
-    height:100px;
-}
-.header>#logo>a{            
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px; 
-    flex:1;
-}
-.header> #logo>a>img{
-    width: 35%;
-}
-#search{
-    flex: 1;
-     display: flex;
-    width: 100%;
-    height: 100%;
-    align-items: center;
-    justify-content: center;  
+    height: 100px;
 }
 
-#search>form{
+.header>#logo>a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    flex: 1;
+}
+
+.header>#logo>a>img {
+    width: 35%;
+}
+
+#search {
+    flex: 1;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#search>form {
     border: 3px solid rgb(213, 129, 221);
     display: flex;
     align-items: center;
 }
-#search>form>input{
+
+#search>form>input {
     border: none;
     outline: none;
 }
-#search>form>button{
+
+#search>form>button {
     border: none;
     display: flex;
     align-items: center;
     background-color: rgb(213, 129, 221);
-
 }
- 
-#logo_contact{
+
+#logo_contact {
     flex: 1;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 }
-#logo_contact>a>img{
+#logo_contact>a{
+    padding-left: 5%;
+}
+
+#logo_contact>a>img {
     width: 40px;
 }
 
-#logo_contact>a:hover img{
+#logo_contact>a:hover img {
     transform: scale(1.2);
 }
 
 
 
 /*___________________ menu ___________________*/
-.header_menu{
+.header_menu {
     width: 100%;
-    height:50px;
+    height: 50px;
     border-bottom: 2px solid rgb(214, 212, 207);
-    border-top:2px solid rgb(214, 212, 207) ;
+    border-top: 2px solid rgb(214, 212, 207);
 }
-.header_menu>ul{
+
+.header_menu>ul {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
-.header_menu>ul>li{
+
+.header_menu>ul>li {
     list-style: none;
     padding-left: 4%;
     padding-right: 4%;
     position: relative;
     z-index: 100;
 }
-.header_menu>ul>li:hover{
+
+.header_menu>ul>li:hover {
     transform: scale(1.2);
 }
-.header_menu>ul>li>a{
+
+.header_menu>ul>li>a {
     text-decoration: none;
     font-size: 20px;
     color: black;
     font-family: 'Charm', cursive;
 }
-.header_menu>ul>li>a:hover{
-    color: rgb(243, 145, 223);  
+
+.header_menu>ul>li>a:hover {
+    color: rgb(243, 145, 223);
 }
-.header_menu>ul>li:nth-child(2):hover #menu_danh_muc{
+
+.header_menu>ul>li:nth-child(2):hover #menu_danh_muc {
     display: block;
 }
 
 
 /*___________________ menu---2 ___________________*/
-#menu_danh_muc{
-    position:absolute;
+#menu_danh_muc {
+    position: absolute;
     width: 200%;
     height: auto;
     display: none;
@@ -134,132 +152,183 @@ body{
     border: 3px solid rgb(119, 118, 116);
 
 }
-#menu_danh_muc>ul>li{
+
+#menu_danh_muc>ul>li {
     width: 100%;
     list-style-type: none;
     padding: 2%;
-   margin-left: 100%;
-   opacity: 0;
+    margin-left: 100%;
+    opacity: 0;
 }
-#menu_danh_muc>ul>li>a:hover{
-    color: rgb(243, 114, 237); 
+
+#menu_danh_muc>ul>li>a:hover {
+    color: rgb(243, 114, 237);
 }
-#menu_danh_muc>ul>li>a{
+
+#menu_danh_muc>ul>li>a {
     text-decoration: none;
     color: black;
     font-family: 'Charm', cursive;
     font-size: 20px;
 }
-.header_menu>ul>li:nth-child(2):hover #menu_danh_muc>ul>li:nth-child(1){
+
+.header_menu>ul>li:nth-child(2):hover #menu_danh_muc>ul>li:nth-child(1) {
     animation: li_1 0.75s ease-out forwards;
 }
-@keyframes li_1{
-    0%{
+
+@keyframes li_1 {
+    0% {
         opacity: 0;
         margin-left: 100%;
     }
-    100%{
+
+    100% {
         margin-left: 0;
         opacity: 1;
     }
 }
-.header_menu>ul>li:nth-child(2):hover #menu_danh_muc>ul>li:nth-child(2){
+
+.header_menu>ul>li:nth-child(2):hover #menu_danh_muc>ul>li:nth-child(2) {
     animation: li_2 0.75s ease-out 0.2s forwards;
 }
-@keyframes li_2{
-    0%{
+
+@keyframes li_2 {
+    0% {
         margin-left: 100%;
         opacity: 0;
     }
-    100%{
+
+    100% {
         margin-left: 0;
         opacity: 1;
     }
-
 }
-.header_menu>ul>li:nth-child(2):hover #menu_danh_muc>ul>li:nth-child(3){
+
+.header_menu>ul>li:nth-child(2):hover #menu_danh_muc>ul>li:nth-child(3) {
     animation: li_3 0.75s ease-out 0.3s forwards;
 }
-@keyframes li_3{
-    0%{
+
+@keyframes li_3 {
+    0% {
         margin-left: 100%;
         opacity: 0;
     }
-    100%{
-        margin-left: 0;
-        opacity: 1;
-    }
-}
-.header_menu>ul>li:nth-child(2):hover #menu_danh_muc>ul>li:nth-child(4){
-    animation: li_4 0.75s ease-out 0.4s forwards;
-}
-@keyframes li_4{
-    0%{
-        margin-left: 100%;
-        opacity: 0;
-    }
-    100%{
-        margin-left: 0;
-        opacity: 1;
-    }
-}
-.header_menu>ul>li:nth-child(2):hover #menu_danh_muc>ul>li:nth-child(5){
-    animation: li_5 0.75s ease-out 0.5s forwards;
-}
-@keyframes li_5{
-    0%{
-        margin-left: 100%;
-        opacity: 0;
-    }
-    100%{
+
+    100% {
         margin-left: 0;
         opacity: 1;
     }
 }
 
-.navbar{
+.header_menu>ul>li:nth-child(2):hover #menu_danh_muc>ul>li:nth-child(4) {
+    animation: li_4 0.75s ease-out 0.4s forwards;
+}
+
+@keyframes li_4 {
+    0% {
+        margin-left: 100%;
+        opacity: 0;
+    }
+
+    100% {
+        margin-left: 0;
+        opacity: 1;
+    }
+}
+.header_menu>ul>li:nth-child(2):hover #menu_danh_muc>ul>li:nth-child(5) {
+    animation: li_5 0.75s ease-out 0.5s forwards;
+}
+
+@keyframes li_5 {
+    0% {
+        margin-left: 100%;
+        opacity: 0;
+    }
+
+    100% {
+        margin-left: 0;
+        opacity: 1;
+    }
+}
+
+.navbar {
     display: none;
 }
+
 /*___________________ mobile menu___________________*/
 
 @media screen and (max-width:768px) {
-    body{
+    body {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
         position: relative;
     }
-    .header{
+
+    .header {
         width: 100%;
         height: auto;
     }
-    .header_menu{
-        display: none;
-    }   
 
-    #search,#logo_contact{
+    .header_menu {
         display: none;
     }
-    .navbar{
+
+    #search,
+    #logo_contact {
+        display: none;
+    }
+
+    .navbar {
         display: block;
         position: absolute;
         width: 20%;
         height: 20%;
         height: auto;
-    } 
-    .navbar-toggler{
+    }
+
+    .navbar-toggler {
         width: 50px;
         height: 50px;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    .dropdown-menu{
+
+    .dropdown-menu {
         border: none;
     }
-
-   
-
+}
+/*___________________ sản phẩm nổi bật___________________*/
+.san_pham_noi_bat{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1%;
+}
+.san_pham_noi_bat>h1>p{
+   color: rgb(220, 39, 181);
 }
 
+.swiper {
+    width: 100%;
+    height: auto;
+    margin-top: 1%;
+  }
 
+  .swiper-slide {
+    text-align: center;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 4%;
+  }
+  .swiper>.swiper-wrapper>.swiper-slide>.card>.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50%;
+  }
