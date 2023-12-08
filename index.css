@@ -294,7 +294,6 @@ body {
         justify-content: center;
         align-items: center;
     }
-
     .dropdown-menu {
         border: none;
     }
@@ -306,7 +305,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 1%;
+    margin-top:2.5%;
+    margin-bottom: 2.5%;
 }
 .san_pham_noi_bat>h1>p{
    color: rgb(220, 39, 181);
@@ -321,14 +321,48 @@ body {
   .swiper-slide {
     text-align: center;
     background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin-left: 4%;
+  }
+  .swiper>.swiper-wrapper>.swiper-slide>.card{
+    min-height: 500px;
   }
   .swiper>.swiper-wrapper>.swiper-slide>.card>.card-body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 50%;
+  }
+  .swiper>.swiper-wrapper>.swiper-slide>.card>.card-body>.btn{
+    background-color:#f061cc;
+    border: none;
+  }
+  .swiper>.swiper-wrapper>.swiper-slide>.card>.card-body>.btn:hover{
+    background-color: #f508baea ;
+  }
+/*___________________ mobile sản phẩm nổi bật___________________*/
+  @media all and (max-width:768px) {
+    .swiper{
+        width: 100%;
+        height: auto;
+    }
+     .swiper>.swiper-wrapper>.swiper-slide>.card{
+        min-height: 350px;
+      }
+    .swiper>.swiper-wrapper>.swiper-slide>.card>.card-body{
+        width: 100%;
+        height: 100%;
+    }
+        .swiper>.swiper-wrapper>.swiper-slide>.card>.card-body>.card-title{
+            font-size: 15px;
+        }
+        .swiper>.swiper-wrapper>.swiper-slide>.card>.card-body>.card-text{
+            display: none;
+        }
+       .swiper>.swiper-wrapper>.swiper-slide>.card>.card-body>.btn{
+        font-size: 13px;
+       }
+
+
+        .swiper-button-next, .swiper-button-prev{
+            opacity: 0;
+        }
   }
