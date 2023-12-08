@@ -9,6 +9,12 @@ body {
 .center{
     width: 80%;
 }
+@media all and (max-width:768px) {
+    .center{
+        width: 100%;
+    }
+    
+}
 .header {
     width: 100%;
     height: auto;
@@ -360,9 +366,7 @@ body {
        .swiper>.swiper-wrapper>.swiper-slide>.card>.card-body>.btn{
         font-size: 13px;
        }
-
-
-        .swiper-button-next, .swiper-button-prev{
+        .swiper-button-next,.swiper-button-prev{
             opacity: 0;
         }
   }
