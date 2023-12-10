@@ -316,6 +316,9 @@ body {
 }
 .san_pham_noi_bat>h1>p{
    color: rgb(220, 39, 181);
+   
+   text-transform: uppercase;
+   text-decoration:underline;
 }
 
 .swiper {
@@ -330,7 +333,13 @@ body {
     margin-left: 4%;
   }
   .swiper>.swiper-wrapper>.swiper-slide>.card{
-    min-height: 500px;
+    min-height: 500px;  
+    overflow: hidden;
+  }
+  .swiper>.swiper-wrapper>.swiper-slide>.card>img:hover{
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+
   }
   .swiper>.swiper-wrapper>.swiper-slide>.card>.card-body {
     display: flex;
@@ -370,3 +379,21 @@ body {
             opacity: 0;
         }
   }
+
+  /*___________________ thực phẩm chăm sóc sắc đẹp___________________*/
+  .beauty-care-food{
+    width: 100%;
+    height: auto;
+  }
+  
+
+  .beauty-care-food-card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .beauty-care-food-card>.card{
+    margin-left: 1%;
+    margin-top: 1%;
+  }
+  

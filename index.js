@@ -35,5 +35,3 @@ updateSlidesPerView();
 // Cập nhật slidesPerView khi thay đổi kích thước màn hình
 window.addEventListener("resize", updateSlidesPerView);
 
-
-
