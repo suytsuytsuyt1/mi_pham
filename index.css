@@ -391,9 +391,16 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
   }
   .beauty-care-food-card>.card{
     margin-left: 1%;
     margin-top: 1%;
+    min-height: 500px;
   }
-  
+  .beauty-care-food-card>.card>.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align:center;
+  }
