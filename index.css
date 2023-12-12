@@ -315,6 +315,9 @@ body {
     }
 }
 
+.banner_2,.banner_3{
+    margin-top: 2%;
+}
 /*___________________ sản phẩm nổi bật___________________*/
 .san_pham_noi_bat {
     width: 100%;
@@ -458,4 +461,76 @@ body {
         min-height: 350px;
         max-width: 150px;
     }
+}
+
+
+/*___________________ contact ___________________*/
+.contact-zalo{
+    position:fixed;
+    bottom: 25%;
+    z-index: 1000;
+    left: 2%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.contact-messenger{
+    position:fixed;
+    bottom: 11%;
+    z-index: 1000;
+    left: 2%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.contact-zalo>.contact-toa{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    animation: play  1.5s ease infinite;
+}
+.contact-messenger>.contact-toa{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    animation: play2  1.5s ease infinite;
+
+}
+@keyframes play {
+    0%{
+        box-shadow: 0em 0em 0em 0.5em rgb(66, 136, 234 , 1);
+    }
+    100%{
+        box-shadow: 0em 0em 0em 1.2em rgba(127, 194, 232, 0.2) ;
+    }
+}
+@keyframes play2 {
+    0%{
+        box-shadow: 0em 0em 0em 0.5em rgb(225, 114, 243, 1);
+    }
+    100%{
+        box-shadow: 0em 0em 0em 1.2em rgb(213, 151, 242, 0.2);
+    }
+}
+.contact-zalo>.contact-toa>a,
+.contact-messenger>.contact-toa>a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-zalo>.contact-toa>a>img,
+.contact-messenger>.contact-toa>a>img{
+    width: 100%;
 }
