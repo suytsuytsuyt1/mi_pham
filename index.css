@@ -3,18 +3,21 @@ body {
     padding: 0;
     box-sizing: border-box;
     width: 100%;
-    display:flex;
+    display: flex;
     justify-content: center;
+    background-color: #f4f4f4ea;
 }
-.center{
+
+.center {
     width: 80%;
 }
+
 @media all and (max-width:768px) {
-    .center{
+    .center {
         width: 100%;
     }
-    
 }
+
 .header {
     width: 100%;
     height: auto;
@@ -34,6 +37,10 @@ body {
 }
 
 /*___________________ logo  ___________________*/
+.header {
+    background-color: white;
+}
+
 .header>#logo {
     display: flex;
     justify-content: center;
@@ -88,7 +95,8 @@ body {
     align-items: center;
     justify-content: center;
 }
-#logo_contact>a{
+
+#logo_contact>a {
     padding-left: 5%;
 }
 
@@ -241,6 +249,7 @@ body {
         opacity: 1;
     }
 }
+
 .header_menu>ul>li:nth-child(2):hover #menu_danh_muc>ul>li:nth-child(5) {
     animation: li_5 0.75s ease-out 0.5s forwards;
 }
@@ -300,107 +309,153 @@ body {
         justify-content: center;
         align-items: center;
     }
+
     .dropdown-menu {
         border: none;
     }
 }
+
 /*___________________ sản phẩm nổi bật___________________*/
-.san_pham_noi_bat{
+.san_pham_noi_bat {
     width: 100%;
     height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top:2.5%;
+    margin-top: 2.5%;
     margin-bottom: 2.5%;
+    text-align: center;
 }
-.san_pham_noi_bat>h1>p{
-   color: rgb(220, 39, 181);
-   
-   text-transform: uppercase;
-   text-decoration:underline;
+
+.san_pham_noi_bat>h1>p {
+    color: rgb(220, 39, 181);
+
+    text-transform: uppercase;
+    text-decoration: underline;
 }
 
 .swiper {
     width: 100%;
     height: auto;
     margin-top: 1%;
-  }
+}
 
-  .swiper-slide {
+.swiper-slide {
     text-align: center;
     background: #fff;
     margin-left: 4%;
-  }
-  .swiper>.swiper-wrapper>.swiper-slide>.card{
-    min-height: 500px;  
+}
+
+.swiper>.swiper-wrapper>.swiper-slide>.card {
+    min-height: 500px;
     overflow: hidden;
-  }
-  .swiper>.swiper-wrapper>.swiper-slide>.card>img:hover{
+}
+
+.swiper>.swiper-wrapper>.swiper-slide>.card>img:hover {
     transform: scale(1.1);
     transition-duration: 0.5s;
+}
 
-  }
-  .swiper>.swiper-wrapper>.swiper-slide>.card>.card-body {
+.swiper>.swiper-wrapper>.swiper-slide>.card>.card-body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  }
-  .swiper>.swiper-wrapper>.swiper-slide>.card>.card-body>.btn{
-    background-color:#f061cc;
-    border: none;
-  }
-  .swiper>.swiper-wrapper>.swiper-slide>.card>.card-body>.btn:hover{
-    background-color: #f508baea ;
-  }
-/*___________________ mobile sản phẩm nổi bật___________________*/
-  @media all and (max-width:768px) {
-    .swiper{
-        width: 100%;
-        height: auto;
-    }
-     .swiper>.swiper-wrapper>.swiper-slide>.card{
-        min-height: 350px;
-      }
-    .swiper>.swiper-wrapper>.swiper-slide>.card>.card-body{
-        width: 100%;
-        height: 100%;
-    }
-        .swiper>.swiper-wrapper>.swiper-slide>.card>.card-body>.card-title{
-            font-size: 15px;
-        }
-        .swiper>.swiper-wrapper>.swiper-slide>.card>.card-body>.card-text{
-            display: none;
-        }
-       .swiper>.swiper-wrapper>.swiper-slide>.card>.card-body>.btn{
-        font-size: 13px;
-       }
-        .swiper-button-next,.swiper-button-prev{
-            opacity: 0;
-        }
-  }
+}
 
-  /*___________________ thực phẩm chăm sóc sắc đẹp___________________*/
-  .beauty-care-food{
+.swiper>.swiper-wrapper>.swiper-slide>.card>.card-body>.btn,
+.beauty-care-food-card>.card>.card-body>.btn {
+    background-color: #f061cc;
+    border: none;
+}
+
+.swiper>.swiper-wrapper>.swiper-slide>.card>.card-body>.btn:hover,
+.beauty-care-food-card>.card>.card-body>.btn:hover {
+    background-color: #f508baea;
+}
+
+
+/*___________________ thực phẩm chăm sóc sắc đẹp___________________*/
+.beauty-care-food {
     width: 100%;
     height: auto;
-  }
-  
+}
 
-  .beauty-care-food-card{
+
+.beauty-care-food-card {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-  }
-  .beauty-care-food-card>.card{
+}
+
+.beauty-care-food-card>.card {
     margin-left: 1%;
     margin-top: 1%;
     min-height: 500px;
-  }
-  .beauty-care-food-card>.card>.card-body{
+}
+
+.beauty-care-food-card>.card>.card-body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    text-align:center;
-  }
+    text-align: center;
+}
+
+.beauty-care-food>.beauty-care-food-card>.card {
+    overflow: hidden;
+}
+
+.beauty-care-food>.beauty-care-food-card>.card>img:hover {
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+}
+
+
+/*___________________ mobile sản phẩm nổi bật---thực phẩm chăm sóc sắc đẹp___________________*/
+@media all and (max-width:768px) {
+
+    .swiper,
+    .beauty-care-food {
+        width: 100%;
+        height: auto;
+    }
+
+    .swiper>.swiper-wrapper>.swiper-slide>.card {
+        min-height: 350px;
+    }
+
+    .swiper>.swiper-wrapper>.swiper-slide>.card>.card-body,
+    .beauty-care-food>.beauty-care-food-card>.card>.card-body {
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper>.swiper-wrapper>.swiper-slide>.card>.card-body>.card-title,
+    .beauty-care-food>.beauty-care-food-card>.card>.card-body>.card-title {
+        font-size: 15px;
+    }
+
+    .swiper>.swiper-wrapper>.swiper-slide>.card>.card-body>.card-text,
+    .beauty-care-food>.beauty-care-food-card>.card>.card-body>.card-text {
+        display: none;
+    }
+
+    .swiper>.swiper-wrapper>.swiper-slide>.card>.card-body>.btn,
+    .beauty-care-food>.beauty-care-food-card>.card>.card-body>.btn {
+        font-size: 13px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        opacity: 0;
+    }
+
+    .san_pham_noi_bat>h1 {
+        font-size: 18px;
+    }
+
+    .beauty-care-food>.beauty-care-food-card>.card {
+        min-height: 350px;
+        max-width: 150px;
+    }
+}
