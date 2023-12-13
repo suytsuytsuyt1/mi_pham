@@ -6,6 +6,7 @@ body {
     display: flex;
     justify-content: center;
     background-color: #f4f4f4ea;
+    flex-wrap: wrap;
 }
 
 .center {
@@ -117,16 +118,13 @@ body {
     border-bottom: 2px solid rgb(214, 212, 207);
     border-top: 2px solid rgb(214, 212, 207);
 }
-
 .header_menu>ul {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
-
 .header_menu>ul>li {
     list-style: none;
     padding-left: 4%;
@@ -138,7 +136,6 @@ body {
 .header_menu>ul>li:hover {
     transform: scale(1.2);
 }
-
 .header_menu>ul>li>a {
     text-decoration: none;
     font-size: 20px;
@@ -164,9 +161,7 @@ body {
     background-color: rgb(252, 246, 238);
     border-radius: 20px 20px;
     border: 3px solid rgb(119, 118, 116);
-
 }
-
 #menu_danh_muc>ul>li {
     width: 100%;
     list-style-type: none;
@@ -477,6 +472,15 @@ body {
     align-items: center;
     border-radius: 50%;
 }
+.contact-zalo>.contact-toa{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    animation: play  1.5s ease infinite;
+}
 .contact-messenger{
     position:fixed;
     bottom: 11%;
@@ -489,15 +493,6 @@ body {
     align-items: center;
     border-radius: 50%;
 }
-.contact-zalo>.contact-toa{
-    width: 50%;
-    height: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    animation: play  1.5s ease infinite;
-}
 .contact-messenger>.contact-toa{
     width: 50%;
     height: 50%;
@@ -506,7 +501,27 @@ body {
     align-items: center;
     border-radius: 50%;
     animation: play2  1.5s ease infinite;
-
+}
+.contact-phone{
+    position:fixed;
+    bottom: 15%;
+    z-index: 1000;
+    right: 5%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.contact-phone>.contact-toa{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    animation: play3  1.5s ease infinite;
 }
 @keyframes play {
     0%{
@@ -524,13 +539,104 @@ body {
         box-shadow: 0em 0em 0em 1.2em rgb(213, 151, 242, 0.2);
     }
 }
+@keyframes play3 {
+    0%{
+        box-shadow: 0em 0em 0em 0.5em rgb(237, 218, 67 ,1);
+    }
+    100%{
+        box-shadow: 0em 0em 0em 1.2em rgb(237, 204, 68 , 0.2);
+    }
+}
 .contact-zalo>.contact-toa>a,
-.contact-messenger>.contact-toa>a{
+.contact-messenger>.contact-toa>a,
+.contact-phone>.contact-toa>a{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .contact-zalo>.contact-toa>a>img,
-.contact-messenger>.contact-toa>a>img{
+.contact-messenger>.contact-toa>a>img,
+.contact-phone>.contact-toa>a>img{
     width: 100%;
+}
+@media all and (max-width:768px) {
+
+    .contact-zalo,
+    .contact-messenger,
+    .contact-phone
+    {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+/*___________________ footer ___________________*/
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(234, 172, 221);
+    margin-top: 2%;
+    font-family: Arial, Helvetica, sans-serif
+}
+.footer-center{    
+    display: flex;
+    width: 80%;
+    height: auto;
+    margin-top: 2%;
+}
+
+.footer-logo{   /*___________________ footer logo ___________________*/
+    flex: 1;   
+    padding: 1%;
+    display: flex;
+    justify-content: centers;
+}
+.logo-center{
+    width:100%;
+}
+.logo-center>img{
+    width: 80%;
+}
+.footer-contact{  /*___________________ footer contact___________________*/
+    flex: 1;
+    padding: 1%;
+    display: grid;
+    justify-content: center;
+    
+}
+.footer-danhmuc{   /*___________________ footer danh muc ___________________*/
+    flex: 1;
+    padding: 1%;
+}
+.footer-danhmucsanpham{
+    display: grid;
+    justify-content: center;
+}
+.footer-danhmucsanpham>a{
+     text-decoration: none;
+     padding-top: 10px;
+     color: black;  
+}
+.footer-danhmucsanpham>a:hover{
+    color: rgb(100, 77, 77);
+}
+.footer-map{    /*___________________ footer map___________________*/
+    flex: 1;
+    padding: 1%;
+}
+.footer-map>iframe{
+    width: 250px;
+    height: 250px;
+}
+
+@media all and (max-width:850px){
+    .footer-center {
+        flex-direction: column;
+        align-items: center;
+      }
+
+
+
+
 }
